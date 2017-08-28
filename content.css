@@ -1,0 +1,61 @@
+.pr-helper-overlay {
+  position: fixed;
+  height: 0;
+  width: 100%;
+  z-index: 10000;
+  opacity: 0;
+  top: 50%;
+  transition: all .25s;
+}
+.pr-helper-overlay.active {
+  background: black;
+  height: 100%;
+  opacity: .5;
+  left: 0;
+  top: 0;
+}
+
+.pr-helper-suggestion {
+  position: absolute;
+  z-index: 888;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.pr-helper-suggestion option {
+  font-size: 13px;
+  background-color: #fff;
+  color: #333;
+  padding: 8px 5px;
+  display: flex;
+  align-items: baseline;
+}
+
+.pr-helper-suggestion option:after {
+  content: " " attr(data-content);
+  color: lightgray;
+  font-size: .8em;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pr-helper-suggestion option:before {
+  content: " " attr(data-title);
+  margin-right: 5px;
+}
+
+.pr-helper-suggestion option:after {
+  content: " " attr(data-content);
+  color: lightgray;
+  font-size: .8em;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

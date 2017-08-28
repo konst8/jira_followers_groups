@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-weight: normal;
+}
+
+body {
+  width: 600px;
+  margin-bottom: 45px;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.entity {
+  background-color: rgba(0, 0, 0, .05);
+  padding: 20px 10px;
+  margin: 20px 0;
+  border: none;
+  cursor: -webkit-grab;
+  min-height: 56px;
+}
+
+.close-trigger {
+  float: right;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.expand-trigger {
+  float: right;
+  margin-left: 10px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.collapsed .expand-trigger {
+  transform: rotate(0);
+}
+
+.ui-icon-arrow-4 {
+  float: left;
+  margin-right: 10px;
+  cursor: -webkit-grab;
+}
+
+.ui-icon-plus {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+}
+
+.ui-sortable-helper {
+  cursor: -webkit-grabbing;
+}
+
+.ui-sortable-helper .ui-icon-arrow-4 {
+  cursor: -webkit-grabbing;
+}
+
+.content {
+  display: block;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.collapsed .content {
+  white-space: nowrap;
+}
+
+.collapsed .content:before {
+  content: attr(data-title) " ";
+  font-weight: bold;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  max-width: 50%;
+}
+
+.collapsed .content:after {
+  content: attr(data-content);
+  color: gray;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin-top: 3px;
+}
+
+.content:focus {
+  background: white;
+}
+
+.collapsed .content input,
+.collapsed .content textarea {
+  display: none;
+}
+
+.entity-actions {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+.description-actions {
+  text-align: right;
+  padding-bottom: 20px;  
+}
+
+#add-template .ui-icon,
+#add-group .ui-icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.settings-actions {
+  position: fixed;
+  bottom: 0;
+  width: 640px;
+  padding: 10px 20px 10px;
+  background: white;
+  border-top: 1px solid lightgray;
+  margin-left: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.settings-actions a,
+.settings-actions button {
+  margin-left: 10px;
+}
