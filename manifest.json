@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "Jira Followers Groups",
-  "description": "Allows to create followers groups and use them while composing comments",
-  "version": "1.0.0.0",
+  "description": "Allows to create Jira followers groups and easily paste them in comments and description fields",
+  "version": "1.0.0.1",
 
   "permissions": [
     "activeTab",
@@ -26,19 +26,14 @@
 
   "content_scripts": [
     {
-      "matches": ["https://*/jira/browse/*"],
+      "matches": ["https://*/jira/browse/*", "https://*/jira/secure/*"],
       "js": ["libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js", "contentScript.js"],
       "css": ["content.css"]
     }
   ],
 
-  "web_accessible_resources": [
-    "contentEject.js"
-  ],
-
   "options_ui": {
     "page": "options/options.html",
     "chrome_style": true
-    //"open_in_tab": true
   }
 }

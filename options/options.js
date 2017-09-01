@@ -15,6 +15,7 @@
       this.$add.on('click', this.add.bind(this));
       this.$container.sortable();
       $('button#save').on('click', this.save.bind(this));
+      $('a#cancel').on('click', function(){window.close();});
     },
 
     _compose(title = '', content = '') {
