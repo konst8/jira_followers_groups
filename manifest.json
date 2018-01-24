@@ -3,7 +3,7 @@
 
   "name": "Jira Followers Groups",
   "description": "Allows to create Jira followers groups and easily paste them in comments and description fields",
-  "version": "1.0.0.1",
+  "version": "1.0.0.2",
 
   "permissions": [
     "activeTab",
