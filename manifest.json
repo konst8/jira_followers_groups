@@ -26,7 +26,12 @@
 
   "content_scripts": [
     {
-      "matches": ["https://*/jira/browse/*", "https://*/jira/secure/*"],
+      "matches": [
+        "https://*/browse/*",
+        "https://*/secure/*",
+        "https://*/jira/browse/*",
+        "https://*/jira/secure/*"       
+      ],
       "js": ["libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js", "contentScript.js"],
       "css": ["content.css"]
     }
